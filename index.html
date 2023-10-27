@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 <style>
@@ -22,8 +23,14 @@
 
     }
 
+    .word {
+        margin: auto;
+
+
+    }
+
     .color {
-        background-color: #131313;
+        background-color: none;
 
     }
 
@@ -102,7 +109,15 @@
     }
 
 
-
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-shadow: 0 0 3px #131313, 0 0 5px #131313;
+    }
 
 
 
@@ -142,14 +157,6 @@
     }
 
     /* ===== Google Font Import - Poppins ===== */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
 
 
 
@@ -196,6 +203,7 @@
         width: 100%;
         text-align: center;
         font-size: 18px;
+        text-shadow: 0 0 3px #131313;
     }
 </style>
 
@@ -236,7 +244,7 @@
                             <a class="nav-l mx-2 active vcll" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-l  mx-2 vcll" href="#">Gallery</a>
+                            <a class="nav-l  mx-2 vcll" href="#">Album</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-l  mx-2 vcll" href="#">About</a>
@@ -254,7 +262,7 @@
 
 
 
-        <div class="center2">
+        <!-- <div class="center2">
             <div class="container2">
                 <span class="text first-text">I'm a</span>
                 <span class="text sec-text">IT Support</span>
@@ -278,8 +286,19 @@
                 textLoad();
                 setInterval(textLoad, 12000);
             </script>
+        </div> -->
+        <div class="hero-text">
+            <h1 style="font-size:50px">Think</h1>
+            <h3 class="word"></h3>
+
         </div>
+
+
         <div class="text-center text-white fixed-bottom">
+            <div class="text-center text-light">
+                <h5>Every new day is another chance to change your life.</h3>
+
+            </div>
             <div class="container pt-4">
                 <section class="mb-0">
                     <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://www.facebook.com/nghisuyy"
@@ -461,5 +480,57 @@
 
 </body>
 
+<script>
+    var words = ['“Life is a mirror and will reflect back to the thinker what he thinks into it.”', 
+    '"Do not pray for an easy life, pray for the strength to endure a difficult one."', 
+    '"Every new day is another chance to change your life."',
+     '"Life is really simple, but we insist on making it complicated."', 
+     '"Hate has a reason for everything but love is unreasonable."'],
+        part,
+        i = 0,
+        offset = 0,
+        len = words.length,
+        forwards = true,
+        skip_count = 0,
+        skip_delay = 30,
+        speed = 40;
+    var wordflick = function () {
+        setInterval(function () {
+            if (forwards) {
+                if (offset >= words[i].length) {
+                    ++skip_count;
+                    if (skip_count == skip_delay) {
+                        forwards = false;
+                        skip_count = 0;
+                    }
+                }
+            }
+            else {
+                if (offset == 0) {
+                    forwards = true;
+                    i++;
+                    offset = 0;
+                    if (i >= len) {
+                        i = 0;
+                    }
+                }
+            }
+            part = words[i].substr(0, offset);
+            if (skip_count == 0) {
+                if (forwards) {
+                    offset++;
+                }
+                else {
+                    offset--;
+                }
+            }
+            $('.word').text(part);
+        }, speed);
+    };
+
+    $(document).ready(function () {
+        wordflick();
+    });
+</script>
 
 </html>
