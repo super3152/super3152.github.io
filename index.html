@@ -19,13 +19,18 @@
     body {
         background-color: #131313;
         font-family: SFUFuturaBook;
+
+    }
+
+    .color {
+        background-color: #131313;
+
     }
 
     .abcde {
         font-weight: bold;
         font-size: 24px;
-        padding-left: 24px;
-        padding-right: 24px;
+
     }
 
     .abcdef {
@@ -33,7 +38,7 @@
 
     }
 
-    .abc {
+    .abc1 {
         width: 102px;
         text-align: center;
     }
@@ -42,41 +47,239 @@
         max-width: 100%;
         height: auto;
         padding: 12px;
-     
-         filter: blur(3px);
+        filter: blur(3px);
     }
 
     .abcdef a:hover {
-        color: #20c997 !important;
+        color: #00FFFF !important;
     }
 
-    .cde a:hover {
-        color: #20c997 !important;
+    a:hover {
+        color: #00FFFF !important;
+    }
+
+    .bd-example {
+        padding: 1.5rem;
+        margin-right: 0;
+        margin-left: 0;
+        border-width: 1px;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem
+    }
+
+    .zoom {
+
+        transition: transform .2s;
+        filter: grayscale(100%);
+
+    }
+
+    .zoom:hover {
+        transform: scale(1.1);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        border: white solid 1px;
+    }
+
+    .vcll {
+        color: white;
+        font-weight: bold;
     }
 </style>
 
 <body>
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-2">
             <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none abcde">
                 Nghisuy
             </a>
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center d-flex abcdef">
-                <li><a href="#" class="nav-link px-4 link-light abc">Home</a></li>
-                <li><a href="#" class="nav-link px-4 link-light abc">About</a></li>
-                <li><a href="#" class="nav-link px-4 link-light abc">Contact</a></li>
+                <li><a href="home.html" class="nav-link px-4 link-light abc1">Home</a></li>
+                <li><a href="about.html" class="nav-link px-4 link-light abc1">About</a></li>
+                <li><a href="contact.html" class="nav-link px-4 link-light abc1">Contact</a></li>
 
             </ul>
 
 
         </header>
-    </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg color p-3">
+        <div class="container-fluid">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none abcde">
+                Nghisuy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon vcll"></span>
+            </button>
+
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto align-items-center vcll">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 vcll" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 vcll" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 vcll" href="#">About</a>
+                    </li>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
 
     <div class="section">
         <div class="backgroundz">
             <img src="1216x810x2.jpg" width="100%" height="810">
         </div>
     </div>
+    <div class="section">
+        <div class="bd-example">
+            <div class="row row-cols-1 row-cols-md-5 g-4 abc">
+                <div class="col abc">
+                    <div class="cards h-100">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards h-100 abc">
+                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
+                            class="card-img-top zoom" alt="...">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
 
 
     <footer class="text-center text-white">
@@ -87,17 +290,11 @@
                 <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
                     data-mdb-ripple-color="light"><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
-                    data-mdb-ripple-color="light"><i class="fab fa-google"></i></a>
-                <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
                     data-mdb-ripple-color="light"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
-                    data-mdb-ripple-color="light"><i class="fab fa-linkedin"></i></a>
-                <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
-                    data-mdb-ripple-color="light"><i class="fab fa-github"></i></a>
             </section>
         </div>
         <div class="text-center text-light p-3">
-            Copyright by:
+            Bản quyền thuộc:
             <a class="text-light text-decoration-none" href="https://www.facebook.com/nghisuyy">Trung Nguyen</a>
         </div>
     </footer>
