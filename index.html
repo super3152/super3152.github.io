@@ -75,7 +75,7 @@
     }
 
     .zoom:hover {
-        transform: scale(1.1);
+        opacity: 0.5;
         /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
         border: white solid 1px;
     }
@@ -83,6 +83,54 @@
     .vcll {
         color: white;
         font-weight: bold;
+    }
+
+    .nav-l {
+        text-decoration: none;
+        padding: 7px;
+    }
+
+    #hero {
+        width: 100%;
+        height: 100vh;
+        background-color: #131313;
+        background-size: cover;
+        position: relative;
+    }
+
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    #preloader:before {
+        content: "";
+        position: fixed;
+        top: calc(50% - 30px);
+        left: calc(50% - 30px);
+        border: 6px solid #131313;
+        border-top-color: #fff;
+        border-bottom-color: #fff;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: animate-preloader 1s linear infinite;
+    }
+
+    @keyframes animate-preloader {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
 </style>
 
@@ -102,49 +150,85 @@
 
         </header>
     </div> -->
-    <nav class="navbar navbar-expand-lg color p-3">
-        <div class="container-fluid">
-            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none abcde">
-                Nghisuy
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon vcll"></span>
-            </button>
+    <section id="hero" class="d-flex flex-column">
+        <nav class="navbar navbar-light navbar-expand-lg color p-3">
+            <div class="container-fluid">
+                <a href="/"
+                    class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none abcde">
+                    Nghisuy
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span>
+                        <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+                    </span>
+                </button>
 
-            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto align-items-center vcll">
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 vcll" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 vcll" href="#">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 vcll" href="#">About</a>
-                    </li>
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto align-items-center vcll">
+                        <li class="nav-item">
+                            <a class="nav-l mx-2 active vcll" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-l  mx-2 vcll" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-l  mx-2 vcll" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-l mx-2 vcll" href="#">Language</a>
+                        </li>
 
-                    </li>
-                </ul>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="backgroundz">
+            <img src="1216x810.jpg" width="100%" height="810">
+        </div>
+
+
+        <div class="text-center text-white fixed-bottom">
+            <div class="container pt-4">
+                <section class="mb-4">
+                    <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
+                        data-mdb-ripple-color="light"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
+                        data-mdb-ripple-color="light"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
+                        data-mdb-ripple-color="light"><i class="fab fa-instagram"></i></a>
+                </section>
+            </div>
+
+            <div class="text-center text-light p-3">
+                Copyright by:
+                <a class="text-light text-decoration-none" href="https://www.facebook.com/nghisuyy">Trung Nguyen</a>
             </div>
         </div>
-    </nav>
+    </section>
 
 
 
-
-    <div class="section">
+    <!-- <div class="section">
         <div class="backgroundz">
             <img src="1216x810x2.jpg" width="100%" height="810">
         </div>
-    </div>
-    <div class="section">
+    </div> -->
+    <!-- <div class="section">
         <div class="bd-example">
             <div class="row row-cols-1 row-cols-md-5 g-4 abc">
                 <div class="col abc">
                     <div class="cards h-100">
-                        <img src="https://down-vn.img.susercontent.com/file/3e9060127db88943f71a06a516063428"
-                            class="card-img-top zoom" alt="...">
+                        <div class="view overlay zoom">
+                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(131).webp"
+                                class="img-fluid " alt="smaple image">
+                            <div class="mask flex-center">
+                                <p class="white-text">Zoom effect</p>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -278,26 +362,12 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
-    <footer class="text-center text-white">
-        <div class="container pt-4">
-            <section class="mb-4">
-                <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
-                    data-mdb-ripple-color="light"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
-                    data-mdb-ripple-color="light"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
-                    data-mdb-ripple-color="light"><i class="fab fa-instagram"></i></a>
-            </section>
-        </div>
-        <div class="text-center text-light p-3">
-            Bản quyền thuộc:
-            <a class="text-light text-decoration-none" href="https://www.facebook.com/nghisuyy">Trung Nguyen</a>
-        </div>
-    </footer>
+
 </body>
+
 
 </html>
