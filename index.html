@@ -140,6 +140,63 @@
             transform: rotate(360deg);
         }
     }
+
+    /* ===== Google Font Import - Poppins ===== */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+
+
+
+    .container2 .text {
+        position: relative;
+        color: #4070F4;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .container2 .text.first-text {
+        color: #FFF;
+    }
+
+    .text.sec-text:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #131313;
+        border-left: 2px solid #4070F4;
+        animation: animate 4s steps(12) infinite;
+    }
+
+    @keyframes animate {
+
+        40%,
+        60% {
+            left: calc(100% + 4px);
+        }
+
+        100% {
+            left: 0%;
+        }
+    }
+
+    .center2 {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+    }
 </style>
 
 <body>
@@ -197,16 +254,43 @@
 
 
 
+        <div class="center2">
+            <div class="container2">
+                <span class="text first-text">I'm a</span>
+                <span class="text sec-text">IT Support</span>
+            </div>
+
+            <script>
+                const text = document.querySelector(".sec-text");
+
+                const textLoad = () => {
+                    setTimeout(() => {
+                        text.textContent = "IT Support";
+                    }, 0);
+                    setTimeout(() => {
+                        text.textContent = "Developer";
+                    }, 4000);
+                    setTimeout(() => {
+                        text.textContent = "Designer";
+                    }, 8000); //1s = 1000 milliseconds
+                }
+
+                textLoad();
+                setInterval(textLoad, 12000);
+            </script>
+        </div>
         <div class="text-center text-white fixed-bottom">
             <div class="container pt-4">
                 <section class="mb-0">
-                    <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://www.facebook.com/nghisuyy" role="button"
-                        data-mdb-ripple-color="light"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://twitter.com/NguynNg90856302" role="button"
-                        data-mdb-ripple-color="light"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://www.instagram.com/sofaraway1604/" role="button"
-                        data-mdb-ripple-color="light"><i class="fab fa-instagram"></i></a>
-                     <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://zalo.me/0847748687"
+                    <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://www.facebook.com/nghisuyy"
+                        role="button" data-mdb-ripple-color="light"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-light m-1"
+                        href="https://twitter.com/NguynNg90856302" role="button" data-mdb-ripple-color="light"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-light m-1"
+                        href="https://www.instagram.com/sofaraway1604/" role="button" data-mdb-ripple-color="light"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://zalo.me/0847748687"
                         role="button" data-mdb-ripple-color="light"><i class="fa-solid fa-z"></i></a>
                 </section>
             </div>
