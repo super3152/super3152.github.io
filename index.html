@@ -288,16 +288,14 @@
             </script>
         </div> -->
         <div class="hero-text">
-            <h3 style="font-size:25px; font-weight:bold">
-                <p >Today:</p>  <p id="date2"></p>
-            </h3>
-            <h3 class="word"></h3>
+
+            <h2 class="word"></h2>
 
         </div>
 
 
         <div class="text-center text-white fixed-bottom">
-           
+
             <div class="container pt-4">
                 <section class="mb-0">
                     <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://www.facebook.com/nghisuyy"
@@ -480,11 +478,11 @@
 </body>
 
 <script>
-    var words = ['“Life is a mirror and will reflect back to the thinker what he thinks into it.”', 
-    '"Do not pray for an easy life, pray for the strength to endure a difficult one."', 
-    '"Every new day is another chance to change your life."',
-     '"Life is really simple, but we insist on making it complicated."', 
-     '"Hate has a reason for everything but love is unreasonable."'],
+    var words = ['“Life is a mirror and will reflect back to the thinker what he thinks into it.”',
+        '"Do not pray for an easy life, pray for the strength to endure a difficult one."',
+        '"Every new day is another chance to change your life."',
+        '"Life is really simple, but we insist on making it complicated."',
+        '"Hate has a reason for everything but love is unreasonable."'],
         part,
         i = 0,
         offset = 0,
@@ -531,11 +529,11 @@
         wordflick();
     });
 
-    n =  new Date();
-y = n.getFullYear();
-m = n.getMonth() + 1;
-d = n.getDate();
-document.getElementById("date2").innerHTML = d + "/" + m + "/" + y;
+    n = new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date2").innerHTML = d + "/" + m + "/" + y;
 </script>
 
 </html>
